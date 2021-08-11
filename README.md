@@ -29,7 +29,16 @@ The Bandit policy is used which is based on a slack factor. If the accuracy of t
 
 ## AutoML
 
-The AutoML uses a variety of models including classification, regressiona and others for training, with a timeout criterion to save on usage cost. Among these models, the Voting Ensemble performs the best.  As its name suggests, this ensemble is an ML model that combines the results of a collection of algorithms. The Voting Ensemble here consists of 7 individual models, of which 4 are XGBoost classifiers, and 1 each of a LightGBM, SGD and Logistic Regression.
+The AutoML uses a variety of models including classification, regression and others for training. The hyperparameters include:
+* A timeout of 30 minutes to save on usage cost 
+* The primary task being 'classification' since that is the goal of the project 
+* The primary metric set to 'accuracy' to score the model (and comparison with Hyperdrive) 
+* The same 'cpu_cluster' compute cluster being used to perform the training like in Hyperdrive
+* The target/predicion labels being 'y' like standard prediction tasks
+* Number of cross validations set to 5
+* ONNX compatibility set to true, allowing for [interchange](https://docs.microsoft.com/en-us/windows/ai/windows-ml/get-onnx-model) of models
+ 
+Among these models, the Voting Ensemble performs the best.  As its name suggests, this ensemble is an ML model that combines the results of a collection of algorithms. The Voting Ensemble here consists of 7 individual models, of which 4 are XGBoost classifiers, and 1 each of a LightGBM, SGD and Logistic Regression.
 
 ![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-10%20at%2011.59.28%20AM.png)
 ![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-11%20at%2011.27.29%20AM.png)
@@ -42,6 +51,7 @@ The AutoML performs better than the Hyperdrive, even if the improvement in accur
 
 ![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-11%20at%2011.06.42%20AM.png)
 ![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-10%20at%2011.06.24%20AM.png)
+![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-11%20at%201.26.28%20PM.png)
 
 ## Future work
 
@@ -52,5 +62,5 @@ Some possible areas of improvement:
 * Accuracy is not always the best primary metric. A model may still fail to make good predictions despite having a high accuracy, so using a different metric may not be a bad idea.
 
 ## Proof of cluster clean up
-![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-10%20at%2012.02.01%20PM.png)
+![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-11%20at%203.46.34%20PM.png)
 
