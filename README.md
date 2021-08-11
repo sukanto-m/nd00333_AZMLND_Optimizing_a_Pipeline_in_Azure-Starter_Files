@@ -32,7 +32,7 @@ The Bandit policy is used which is based on a slack factor. If the accuracy of t
 The AutoML uses a variety of models including classification, regressiona and others for training, with a timeout criterion to save on usage cost. Among these models, the Voting Ensemble performs the best.  As its name suggests, this ensemble is an ML model that combines the results of a collection of algorithms. The Voting Ensemble here consists of 7 individual models, of which 4 are XGBoost classifiers, and 1 each of a LightGBM, SGD and Logistic Regression.
 
 ![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-10%20at%2011.59.28%20AM.png)
-![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-10%20at%2011.06.24%20AM.png)
+![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-11%20at%2011.27.29%20AM.png)
 
 
 
@@ -40,8 +40,8 @@ The AutoML uses a variety of models including classification, regressiona and ot
 
 The AutoML performs better than the Hyperdrive, even if the improvement in accuracy is only about 1%-2%. This is simply because AutoML has a number of models at its disposal as compared to Hyperdrive. It also reveals an imbalance in the dataset (data guardrails as shown in the notebook) which offer scope for improvement as detailed in the next section.
 
+![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-11%20at%2011.06.42%20AM.png)
 ![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-10%20at%2011.06.24%20AM.png)
-![image](https://github.com/sukanto-m/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Screenshot%202021-08-10%20at%2011.59.28%20AM.png)
 
 ## Future work
 
